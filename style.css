@@ -1,0 +1,50 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: antiquewhite;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.grid {
+  display: flex;
+  border: 3px solid black;
+  width: 350px;
+  height: 350px;
+  padding: auto;
+  margin: auto;
+  background-color: white;
+}
+button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.black {
+  background-color: rgb(39, 36, 36);
+}
+.clear {
+  background-color: rgb(229, 171, 37);
+}
+.colored {
+  background-color: rgb(1, 75, 128);
+}
+input[type="range"] {
+  align-items: flex-start;
+  writing-mode: vertical-lr;
+  direction: rtl;
+  vertical-align: middle;
+  background-color: rgba(10, 122, 235, 0.689);
+  width: auto;
+  height: auto;
+}
