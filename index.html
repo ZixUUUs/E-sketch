@@ -9,15 +9,30 @@
   <body>
     <header></header>
     <h1>Etch-a sketch</h1>
+    <button class="start" onclick="getGridCells()">start</button>
+    <label for="text">put a number from 16 ==> 64</label>
+    <input class="input" type="number" value="16" />
     <section class="container">
-      <input type="range" min="16" max="64" class="sized" value="16" />
       <div class="grid"></div>
     </section>
     <section class="intereact">
-      <button class="black">black</button>
+      <div>
+        <form action="" name="MyColor">
+          <select id="colors" name="colors">
+            <option value="Blue" id="Blue">Blue</option>
+            <option value="Red" id="Red">Red</option>
+            <option value="Yellow" id="Yellow">Yellow</option>
+            <option value="Green" id="Green">Green</option>
+            <option value="Purple" id="Purple">Purple</option>
+            <option value="Pink" id="Pink">Pink</option>
+            <option value="Black" id="Black">Black</option>
+          </select>
+        </form>
+      </div>
       <button class="clear">clear</button>
       <button class="colored">multicolor</button>
     </section>
+
     <footer></footer>
   </body>
   <script src="./Main.js"></script>

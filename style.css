@@ -10,11 +10,16 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
+.intereact {
+  display: flex;
+  justify-content: space-evenly;
+}
 .grid {
   display: flex;
+  flex-wrap: wrap;
   border: 3px solid black;
-  width: 350px;
-  height: 350px;
+  width: 400px;
+  height: 400px;
   padding: auto;
   margin: auto;
   background-color: white;
@@ -30,21 +35,57 @@ button {
   margin: 4px 2px;
   cursor: pointer;
 }
-.black {
-  background-color: rgb(39, 36, 36);
-}
+
 .clear {
   background-color: rgb(229, 171, 37);
 }
 .colored {
   background-color: rgb(1, 75, 128);
 }
-input[type="range"] {
-  align-items: flex-start;
-  writing-mode: vertical-lr;
-  direction: rtl;
-  vertical-align: middle;
-  background-color: rgba(10, 122, 235, 0.689);
-  width: auto;
-  height: auto;
+.start {
+  background-color: rgb(59, 71, 82);
+}
+.setNum {
+  background-color: rgb(59, 71, 82);
+}
+.squares {
+  border: 1px solid whitesmoke;
+}
+#colors {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: rgb(39, 36, 36);
+}
+#Blue:hover {
+  background-color: rgba(6, 154, 203, 0.781);
+}
+#Red:hover {
+  background-color: rgba(179, 16, 16, 0.781);
+}
+#Yellow:hover {
+  background-color: rgb(255, 251, 0, 0.781);
+}
+#Purple:hover {
+  background-color: rgba(145, 24, 220, 0.781);
+}
+#Pink:hover {
+  background-color: rgba(232, 0, 253, 0.781);
+}
+#Green:hover {
+  background-color: rgba(63, 174, 11, 0.781);
+}
+#Black:hover {
+  background-color: rgb(39, 36, 36, 0.781);
+}
+input[type="number"] {
+  text-align: center;
+  background-color: rgb(59, 71, 82);
+  color: white;
 }
