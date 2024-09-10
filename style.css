@@ -63,25 +63,26 @@ button {
   cursor: pointer;
   background-color: rgb(39, 36, 36);
 }
-#Blue:hover {
+
+.Blue:hover {
   background-color: rgba(6, 154, 203, 0.781);
 }
-#Red:hover {
+.Red:hover {
   background-color: rgba(179, 16, 16, 0.781);
 }
-#Yellow:hover {
+.Yellow:hover {
   background-color: rgb(255, 251, 0, 0.781);
 }
-#Purple:hover {
+.Purple:hover {
   background-color: rgba(145, 24, 220, 0.781);
 }
-#Pink:hover {
+.Pink:hover {
   background-color: rgba(232, 0, 253, 0.781);
 }
-#Green:hover {
+.Green:hover {
   background-color: rgba(63, 174, 11, 0.781);
 }
-#Black:hover {
+.Black:hover {
   background-color: rgb(39, 36, 36, 0.781);
 }
 input[type="number"] {
