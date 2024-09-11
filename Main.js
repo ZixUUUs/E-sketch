@@ -1,9 +1,14 @@
 const grid = document.querySelector(".grid");
 const GRIDWTH = grid.offsetWidth;
 const GRIDHGT = grid.offsetHeight;
-const colored = document.querySelector(".colored");
-
 const cell = document.querySelector(".input");
+let colored = document.querySelector("colored");
+function coloredHim() {
+  let colorMe = "colorMe";
+  console.log(colorMe);
+  return colorMe;
+}
+
 let form = document.forms["MyColor"];
 let menu = form.colors;
 let options = form.colors.options;
@@ -23,18 +28,26 @@ function cellDimension() {
   }
 }
 function getRandomColor() {
-  let letters = "0123456789ABCDEF";
-  let color = "#";
-  for (let i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
+  const arrColor = [
+    "blue",
+    "black",
+    "yellow",
+    "green",
+    "purple",
+    "pink",
+    "red",
+  ];
+  let randomChoose = Math.floor(Math.random() * arrColor.length);
+  let randomColor = arrColor[randomChoose];
+  return randomColor;
 }
 
 function getGridCells() {
   let dim = cellDimension();
 
   if (!dim) return;
+
+  grid.innerHTML = "";
 
   for (let i = 0; i < dim * dim; i++) {
     const gridCell = document.createElement("div");
@@ -44,8 +57,8 @@ function getGridCells() {
     grid.appendChild(gridCell);
 
     gridCell.addEventListener("mouseover", function () {
-      if (colored.onclick) {
-        return (gridCell.style.backgroundColor = getRandomColor());
+      if ((colored = "colorMe")) {
+        gridCell.style.backgroundColor = getRandomColor();
       } else {
         gridCell.style.backgroundColor = menu.onchange();
       }
