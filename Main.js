@@ -11,12 +11,12 @@ let colorEnabled = false;
 
 colored.addEventListener("click", function () {
   colorEnabled = !colorEnabled;
-  return (colored.disabled = true);
+  colored.classList.toggle("active", colorEnabled);
 });
 
 clear.addEventListener("click", () => {
   clean = !clean;
-  return (clear.disabled = true);
+  clear.classList.toggle("active", clean);
 });
 
 let form = document.forms["MyColor"];
