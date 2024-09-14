@@ -2,12 +2,22 @@ const grid = document.querySelector(".grid");
 const GRIDWTH = grid.offsetWidth;
 const GRIDHGT = grid.offsetHeight;
 const cell = document.querySelector(".input");
-let colored = document.querySelector("colored");
-function coloredHim() {
-  let colorMe = "colorMe";
-  console.log(colorMe);
-  return colorMe;
-}
+const colored = document.querySelector(".colored");
+const clear = document.querySelector(".clear");
+
+let clean = false;
+
+let colorEnabled = false;
+
+colored.addEventListener("click", function () {
+  colorEnabled = !colorEnabled;
+  return (colored.disabled = true);
+});
+
+clear.addEventListener("click", () => {
+  clean = !clean;
+  return (clear.disabled = true);
+});
 
 let form = document.forms["MyColor"];
 let menu = form.colors;
@@ -24,7 +34,7 @@ function cellDimension() {
     return cellValue;
   } else {
     alert("get a number from 16 => 64");
-    return nul;
+    return null;
   }
 }
 function getRandomColor() {
@@ -57,10 +67,12 @@ function getGridCells() {
     grid.appendChild(gridCell);
 
     gridCell.addEventListener("mouseover", function () {
-      if ((colored = "colorMe")) {
+      gridCell.style.backgroundColor = menu.onchange();
+      if (colorEnabled) {
         gridCell.style.backgroundColor = getRandomColor();
-      } else {
-        gridCell.style.backgroundColor = menu.onchange();
+      }
+      if (clean) {
+        gridCell.style.backgroundColor = "white";
       }
     });
   }

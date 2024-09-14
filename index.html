@@ -9,7 +9,7 @@
   <body>
     <header></header>
     <h1>Etch-a sketch</h1>
-    <button class="start" onclick="getGridCells()">start</button>
+    <button class="start" onclick="getGridCells()">start/clear</button>
     <label for="text">put a number from 16 ==> 64</label>
     <input class="input" type="number" value="16" />
     <section class="container">
@@ -29,8 +29,8 @@
           </select>
         </form>
       </div>
-      <button class="clear">clear</button>
-      <button class="colored" onclick="coloredHim()">multicolor</button>
+      <button type="button" class="clear">eraser</button>
+      <button type="button" class="colored">multicolor</button>
     </section>
 
     <footer></footer>
